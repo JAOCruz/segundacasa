@@ -1,0 +1,324 @@
+/* Custom Black & White Theme for Segunda Casa */
+
+/* Primary Button Styling */
+.primary-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.primary-btn:hover:before {
+    left: 100%;
+}
+
+/* Service Overlay Buttons */
+.single-service .overlay .text .primary-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+
+.single-service .overlay .text .primary-btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Event Buttons */
+.single-events .primary-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+
+.single-events .primary-btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Banner Button */
+.banner-content .primary-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+    font-weight: 600;
+    padding: 12px 30px;
+}
+
+.banner-content .primary-btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth transitions for all buttons */
+.btn, .primary-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Service Section Styling - Black Boxes with White Text */
+.single-service {
+    background: #000000 !important;
+    color: #ffffff !important;
+    padding: 30px 25px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.single-service h4 {
+    color: #ffffff !important;
+    margin-bottom: 20px !important;
+}
+
+.single-service p {
+    color: #ffffff !important;
+    line-height: 1.6 !important;
+}
+
+.single-service .lnr {
+    color: #ffffff !important;
+    font-size: 48px !important;
+    margin-bottom: 20px !important;
+}
+
+/* First service box (Horarios) - Smaller size */
+.single-service:first-child {
+    height: auto !important;
+    min-height: 280px !important;
+}
+
+/* Second and third service boxes - Larger size */
+.single-service:nth-child(2),
+.single-service:nth-child(3) {
+    height: auto !important;
+    min-height: 320px !important;
+}
+
+/* Hover effects for service cards */
+.single-service:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.single-service .overlay {
+    background: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Service overlay text styling */
+.single-service .overlay .text {
+    color: #ffffff !important;
+}
+
+.single-service .overlay .text p {
+    color: #ffffff !important;
+}
+
+/* Event card hover effects */
+.single-events:hover {
+    transform: translateY(-3px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Gallery hover effects */
+.single-gallery:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+}
+
+/* Contact Page Specific Styling */
+.contact-page-area .primary-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+
+.contact-page-area .primary-btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Contact address icons */
+.single-contact-address .icon .lnr {
+    color: #000000 !important;
+    font-size: 24px !important;
+}
+
+/* Contact form styling */
+.contact-page-area .form-control:focus {
+    border-color: #000000 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Map styling */
+.map-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling - Small Circular Design */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Logo hover effect */
+.logo-container:hover .logo-icon {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover .logo-text {
+    color: #333333;
+    transition: color 0.3s ease;
+} 
+
+
+/* Contact Section Gradient Background */
+.contact-page-area {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 25%, #6c757d 50%, #495057 75%, #000000 100%) !important;
+    color: #ffffff !important;
+}
+
+.contact-page-area .single-contact-address h5 {
+    color: #ffffff !important;
+    margin-bottom: 15px !important;
+}
+
+.contact-page-area .single-contact-address p {
+    color: #ffffff !important;
+}
+
+.contact-page-area .single-contact-address a {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+.contact-page-area .single-contact-address a:hover {
+    color: #e9ecef !important;
+}
+
+.contact-page-area .icon span {
+    color: #ffffff !important;
+}
+
+/* Footer Black Background */
+.footer-area {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.footer-area .single-footer-widget h6 {
+    color: #ffffff !important;
+}
+
+.footer-area .single-footer-widget p {
+    color: #e9ecef !important;
+}
+
+.footer-area .contact-info p {
+    color: #e9ecef !important;
+}
+
+.footer-area .contact-info a {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+.footer-area .contact-info a:hover {
+    color: #e9ecef !important;
+}
+
+.footer-area .footer-social a {
+    color: #ffffff !important;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-area .footer-social a:hover {
+    color: #e9ecef !important;
+}
