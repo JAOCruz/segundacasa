@@ -23,6 +23,12 @@ export default defineConfig({
       }
     }
   },
+  css: {
+    // Ensure all CSS is processed and bundled
+    devSourcemap: false,
+    // Force CSS to be bundled
+    modules: false
+  },
   server: {
     port: 3000,
     open: true,
@@ -39,6 +45,5 @@ export default defineConfig({
   },
   esbuild: {
     logOverride: { 'this-is-undefined-in-esm': 'silent' }
-  },
-
+  }
 }) 

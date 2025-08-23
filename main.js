@@ -1,4 +1,4 @@
-// Import CSS files
+// Import CSS files - These will be bundled by Vite in production
 import './css/bootstrap.css'
 import './css/font-awesome.min.css'
 import './css/linearicons.css'
@@ -15,6 +15,9 @@ const isProduction = import.meta.env.PROD
 if (isProduction) {
   // Production: Load from CDN
   loadProductionScripts()
+  
+  // Ensure custom CSS is loaded in production
+  ensureCustomCSS()
 } else {
   // Development: Import directly
   import('./js/vendor/jquery-2.2.4.min.js')
@@ -71,6 +74,53 @@ function loadScript(src) {
   document.head.appendChild(script)
 }
 
+// Function to ensure custom CSS is loaded in production
+function ensureCustomCSS() {
+  // Check if custom CSS is already loaded
+  const customCSSLoaded = document.querySelector('link[href*="custom-styles"]') || 
+                          document.querySelector('style[data-custom-styles]')
+  
+  if (!customCSSLoaded) {
+    // Try to load custom CSS from the assets folder first
+    const customCSSLink = document.createElement('link')
+    customCSSLink.rel = 'stylesheet'
+    customCSSLink.href = './css/custom-styles.css'
+    customCSSLink.setAttribute('data-custom-styles', 'true')
+    customCSSLink.onerror = () => {
+      // If that fails, try to load from the root css folder
+      const fallbackCSSLink = document.createElement('link')
+      fallbackCSSLink.rel = 'stylesheet'
+      fallbackCSSLink.href = '/css/custom-styles.css'
+      fallbackCSSLink.setAttribute('data-custom-styles', 'true')
+      document.head.appendChild(fallbackCSSLink)
+      console.log('Custom CSS loaded from fallback path')
+    }
+    document.head.appendChild(customCSSLink)
+    
+    console.log('Custom CSS loaded in production')
+  }
+}
+
+// Header scroll effect functionality
+function initHeaderScrollEffect() {
+  const header = document.getElementById('header')
+  if (!header) return
+
+  function handleScroll() {
+    if (window.scrollY > 100) {
+      header.classList.add('scrolled')
+    } else {
+      header.classList.remove('scrolled')
+    }
+  }
+
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll)
+  
+  // Initial check
+  handleScroll()
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
   if (isProduction) {
@@ -78,6 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     console.log('Segunda Casa - Arte Actual development website loaded successfully!')
   }
+  
+  // Initialize header scroll effect
+  initHeaderScrollEffect()
 })
 
 // Production-specific initialization function
@@ -149,7 +202,10 @@ function initializeProductionFeatures() {
         })
       }
       
-      console.log('Production features initialized successfully!')
-    }
-  }, 100)
-} 
+                        console.log('Production features initialized successfully!')
+                  
+                  // Initialize header scroll effect for production
+                  initHeaderScrollEffect()
+                }
+              }, 100)
+            } 

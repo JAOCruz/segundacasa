@@ -1,5 +1,80 @@
 /* Custom Black & White Theme for Segunda Casa */
 
+/* Header Scroll Effect - Background turns black on scroll */
+#header {
+    transition: all 0.3s ease !important;
+    background: transparent !important;
+}
+
+#header.scrolled {
+    background: #000000 !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+#header.scrolled .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+#header.scrolled .navbar-nav .nav-link:hover,
+#header.scrolled .navbar-nav .nav-link:focus {
+    color: #cccccc !important;
+}
+
+#header.scrolled .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+}
+
+#header.scrolled .logo-text {
+    color: #ffffff !important;
+}
+
+#header.scrolled .top-head-left ul li a,
+#header.scrolled .top-head-right ul li a {
+    color: #ffffff !important;
+}
+
+#header.scrolled .top-head-left ul li a:hover,
+#header.scrolled .top-head-right ul li a:hover {
+    color: #cccccc !important;
+}
+
+/* Banner Area - Preserve original functionality */
+.banner-area {
+    background: url(../img/header-bg.jpg) center !important;
+    background-size: cover !important;
+    min-height: 100vh !important;
+}
+
+.banner-area .overlay-bg {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.banner-content {
+    margin-top: -90px !important;
+    text-align: center !important;
+}
+
+.banner-content h1 {
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 1em !important;
+    margin-top: 20px !important;
+}
+
+.banner-content h6 {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+
+/* Fullscreen class for banner */
+.fullscreen {
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
 /* Primary Button Styling */
 .primary-btn {
     background: #000000 !important;
@@ -104,35 +179,26 @@
 
 .single-service .lnr {
     color: #ffffff !important;
-    font-size: 48px !important;
+    font-size: 40px !important;
     margin-bottom: 20px !important;
 }
 
-/* First service box (Horarios) - Smaller size */
+/* Make first service box smaller */
 .single-service:first-child {
-    height: auto !important;
     min-height: 280px !important;
 }
 
-/* Second and third service boxes - Larger size */
-.single-service:nth-child(2),
-.single-service:nth-child(3) {
-    height: auto !important;
-    min-height: 320px !important;
-}
-
-/* Hover effects for service cards */
-.single-service:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
+/* Service overlay styling */
 .single-service .overlay {
-    background: rgba(0, 0, 0, 0.95) !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    opacity: 0;
+    transition: all 0.3s ease !important;
 }
 
-/* Service overlay text styling */
+.single-service:hover .overlay {
+    opacity: 1 !important;
+}
+
 .single-service .overlay .text {
     color: #ffffff !important;
 }
@@ -141,20 +207,38 @@
     color: #ffffff !important;
 }
 
-/* Event card hover effects */
+/* Event Cards Styling */
+.single-events {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
 .single-events:hover {
-    transform: translateY(-3px);
-    transition: transform 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Gallery hover effects */
+.single-events h4 {
+    color: #ffffff !important;
+}
+
+.single-events p {
+    color: #ffffff !important;
+}
+
+.single-events .date {
+    color: #cccccc !important;
+}
+
+/* Gallery Image Hover Effects */
 .single-gallery:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+    transform: scale(1.05) !important;
+    transition: all 0.3s ease !important;
 }
 
-/* Custom scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -173,115 +257,90 @@
 }
 
 /* Contact Page Specific Styling */
-.contact-page-area .primary-btn {
+.contact-page-area .single-contact-address {
     background: #000000 !important;
     color: #ffffff !important;
-    border: 2px solid #000000 !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
 }
 
-.contact-page-area .primary-btn:hover {
-    background: #ffffff !important;
-    color: #000000 !important;
-    border-color: #000000 !important;
+.contact-page-area .single-contact-address:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Contact address icons */
-.single-contact-address .icon .lnr {
-    color: #000000 !important;
-    font-size: 24px !important;
-}
-
-/* Contact form styling */
-.contact-page-area .form-control:focus {
-    border-color: #000000 !important;
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25) !important;
-}
-
-/* Map styling */
-.map-wrap {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo Styling - Small Circular Design */
-.logo-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-}
-
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    border: 2px solid #000000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.logo-icon img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.logo-text {
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Logo hover effect */
-.logo-container:hover .logo-icon {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-.logo-container:hover .logo-text {
-    color: #333333;
-    transition: color 0.3s ease;
-} 
-
-
-/* Contact Section Gradient Background */
-.contact-page-area {
-    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 25%, #6c757d 50%, #495057 75%, #000000 100%) !important;
+.contact-page-area .single-contact-address .icon {
     color: #ffffff !important;
 }
 
 .contact-page-area .single-contact-address h5 {
     color: #ffffff !important;
-    margin-bottom: 15px !important;
 }
 
 .contact-page-area .single-contact-address p {
+    color: #cccccc !important;
+}
+
+.contact-page-area .form-control:focus {
+    border-color: #000000 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25) !important;
+}
+
+.contact-page-area .btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+
+.contact-page-area .btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.logo-icon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: #000000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 10px !important;
+    overflow: hidden !important;
+}
+
+.logo-icon img {
+    width: 28px !important;
+    height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    object-fit: contain !important;
+}
+
+.logo-text {
+    font-size: 24px !important;
+    font-weight: 700 !important;
     color: #ffffff !important;
 }
 
-.contact-page-area .single-contact-address a {
+/* Contact Section Gradient Background */
+.contact-area {
+    background: linear-gradient(135deg, #f8f9fa 0%, #000000 100%) !important;
     color: #ffffff !important;
-    text-decoration: underline;
+    padding: 60px 0 !important;
 }
 
-.contact-page-area .single-contact-address a:hover {
-    color: #e9ecef !important;
-}
-
-.contact-page-area .icon span {
+.contact-page-area {
+    background: linear-gradient(135deg, #f8f9fa 0%, #000000 100%) !important;
     color: #ffffff !important;
 }
 
@@ -291,34 +350,91 @@
     color: #ffffff !important;
 }
 
-.footer-area .single-footer-widget h6 {
+/* Exhibition Area Styling - Preserve original size but add custom styling */
+.exibition-area {
+    background-color: #f9f9ff !important;
+    padding: 80px 0 !important;
+}
+
+.exibition-area .title h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 20px !important;
+    color: #000000 !important;
+}
+
+.exibition-area .title p {
+    color: #666666 !important;
+    font-size: 1rem !important;
+}
+
+.exibition-area .single-exibition {
+    background: #ffffff !important;
+    border: 1px solid #eeeeee !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin: 15px !important;
+    transition: all 0.3s ease !important;
+}
+
+.exibition-area .single-exibition:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.exibition-area .single-exibition img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 4px !important;
+}
+
+.exibition-area .single-exibition h4 {
+    color: #000000 !important;
+    font-size: 1.25rem !important;
+    margin: 15px 0 !important;
+}
+
+.exibition-area .single-exibition p {
+    color: #666666 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 10px !important;
+}
+
+.exibition-area .single-exibition .date {
+    color: #888888 !important;
+    font-size: 0.9rem !important;
+}
+
+.exibition-area .tags li {
+    background-color: #f8f9fa !important;
+    border-color: #dee2e6 !important;
+}
+
+.exibition-area .tags li a {
+    color: #495057 !important;
+}
+
+.exibition-area .tags li:hover {
+    background-color: #000000 !important;
+}
+
+.exibition-area .tags li:hover a {
     color: #ffffff !important;
 }
 
-.footer-area .single-footer-widget p {
-    color: #e9ecef !important;
+/* Control carousel size */
+.exibition-area .active-exibition-carusel {
+    max-width: 100% !important;
+    margin: 0 auto !important;
 }
 
-.footer-area .contact-info p {
-    color: #e9ecef !important;
+.exibition-area .owl-dots {
+    margin-top: 30px !important;
 }
 
-.footer-area .contact-info a {
-    color: #ffffff !important;
-    text-decoration: underline;
+.exibition-area .owl-dot {
+    background: #cccccc !important;
 }
 
-.footer-area .contact-info a:hover {
-    color: #e9ecef !important;
-}
-
-.footer-area .footer-social a {
-    color: #ffffff !important;
-    font-size: 18px;
-    margin-right: 15px;
-    transition: color 0.3s ease;
-}
-
-.footer-area .footer-social a:hover {
-    color: #e9ecef !important;
+.exibition-area .owl-dot.active {
+    background: #000000 !important;
 }
