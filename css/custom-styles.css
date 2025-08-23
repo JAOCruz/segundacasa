@@ -207,12 +207,50 @@
     color: #ffffff !important;
 }
 
+/* Ensure ALL text in service boxes is white */
+.single-service * {
+    color: #ffffff !important;
+}
+
+.single-service h1,
+.single-service h2,
+.single-service h3,
+.single-service h4,
+.single-service h5,
+.single-service h6,
+.single-service p,
+.single-service span,
+.single-service div,
+.single-service li,
+.single-service a {
+    color: #ffffff !important;
+}
+
+/* Service box hover effects */
+.single-service:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Service box links */
+.single-service a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.single-service a:hover {
+    color: #cccccc !important;
+    text-decoration: underline !important;
+}
+
 /* Event Cards Styling */
 .single-events {
     background: #000000 !important;
     color: #ffffff !important;
     border-radius: 8px !important;
     transition: all 0.3s ease !important;
+    padding: 25px !important;
+    margin-bottom: 30px !important;
 }
 
 .single-events:hover {
@@ -222,14 +260,80 @@
 
 .single-events h4 {
     color: #ffffff !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 15px !important;
+    font-weight: 600 !important;
+}
+
+.single-events h6 {
+    color: #cccccc !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 15px !important;
+    font-weight: 400 !important;
+}
+
+.single-events h6 span {
+    color: #ffffff !important;
+    font-weight: 600 !important;
 }
 
 .single-events p {
-    color: #ffffff !important;
+    color: #e0e0e0 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+    font-size: 0.95rem !important;
 }
 
 .single-events .date {
     color: #cccccc !important;
+}
+
+.single-events a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.single-events a:hover {
+    color: #cccccc !important;
+    text-decoration: underline !important;
+}
+
+/* Ensure ALL text in event cards is properly colored */
+.single-events * {
+    color: inherit !important;
+}
+
+.single-events h1,
+.single-events h2,
+.single-events h3,
+.single-events h4,
+.single-events h5,
+.single-events h6,
+.single-events p,
+.single-events span,
+.single-events div,
+.single-events li {
+    color: inherit !important;
+}
+
+/* Event card images */
+.single-events img {
+    border-radius: 8px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Event card buttons */
+.single-events .primary-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    transition: all 0.3s ease !important;
+}
+
+.single-events .primary-btn:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
 }
 
 /* Gallery Image Hover Effects */
@@ -348,6 +452,109 @@
 .footer-area {
     background: #000000 !important;
     color: #ffffff !important;
+}
+
+/* Footer Text Styling - Ensure all text is readable */
+.footer-area * {
+    color: #ffffff !important;
+}
+
+.footer-area h1,
+.footer-area h2,
+.footer-area h3,
+.footer-area h4,
+.footer-area h5,
+.footer-area h6,
+.footer-area p,
+.footer-area span,
+.footer-area div,
+.footer-area li,
+.footer-area a {
+    color: #ffffff !important;
+}
+
+/* Footer section titles */
+.footer-area .single-footer-widget h6 {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 20px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Footer content text */
+.footer-area .single-footer-widget p {
+    color: #e0e0e0 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Footer links */
+.footer-area .single-footer-widget a {
+    color: #cccccc !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-area .single-footer-widget a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+/* Footer contact info */
+.footer-area .contact-info p {
+    color: #e0e0e0 !important;
+    margin-bottom: 8px !important;
+}
+
+.footer-area .contact-info a {
+    color: #cccccc !important;
+    text-decoration: none !important;
+}
+
+.footer-area .contact-info a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+/* Footer social links */
+.footer-area .footer-social a {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    margin-right: 15px !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-area .footer-social a:hover {
+    color: #cccccc !important;
+}
+
+/* Footer bottom section */
+.footer-area .footer-bottom {
+    border-top: 1px solid #333333 !important;
+    padding-top: 20px !important;
+}
+
+.footer-area .footer-bottom p {
+    color: #cccccc !important;
+    margin: 0 !important;
+}
+
+/* Ensure footer widgets are properly styled */
+.footer-area .single-footer-widget {
+    margin-bottom: 30px !important;
+}
+
+.footer-area .single-footer-widget ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-area .single-footer-widget ul li {
+    margin-bottom: 8px !important;
+    color: #e0e0e0 !important;
 }
 
 /* Exhibition Area Styling - Preserve original size but add custom styling */
